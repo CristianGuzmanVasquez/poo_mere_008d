@@ -3,16 +3,44 @@ package dev.rampmaster;
 import java.util.HashSet;
 
 public class Sala {
-    private  String codigoSala;
-    private int numeroAsientos;
-    private int maximoEstudiantes;
-    private boolean disponible;
+   private  int numeroSala;
+   private int capacidadMaxima;
+   private int codigoSala;
 
-    public Sala(String codigoSala, int numeroAsientos, int maximoEstudiantes) {
+   public Sala(int numeroSala, int capacidadMaxima, int codigoSala) {
+       this.numeroSala = numeroSala;
+       this.capacidadMaxima = capacidadMaxima;
+       this.codigoSala = codigoSala;
+   }
+
+    public int getCapacidadMaxima() {
+        return capacidadMaxima;
+    }
+
+    public void setCapacidadMaxima(int capacidadMaxima) {
+        this.capacidadMaxima = capacidadMaxima;
+    }
+
+    public int getCodigoSala() {
+        return codigoSala;
+    }
+
+    public void setCodigoSala(int codigoSala) {
         this.codigoSala = codigoSala;
-        this.numeroAsientos = numeroAsientos;
-        this.maximoEstudiantes = maximoEstudiantes;
-        this.disponible = true;
+    }
 
+    public int getNumeroSala() {
+        return numeroSala;
+    }
+
+    public void setNumeroSala(int numeroSala) {
+        this.numeroSala = numeroSala;
+    }
+
+    public void mostrarSala(){
+       System.out.println("Sala:");
+       System.out.println("Numero de sala: " + numeroSala);
+       System.out.println("Capacidad maxima: " + capacidadMaxima);
+       System.out.println("Codigo de sala: " + codigoSala);
     }
 }
